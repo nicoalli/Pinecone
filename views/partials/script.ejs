@@ -1,0 +1,67 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+    $(document).ready(function (){
+        $( "#dialog-form" ).dialog({
+            autoOpen: false
+        });
+
+        $('body').on('click', 'button.book', function () {
+            var roomNum = $(this).val();
+            var url = '/api/room/' + roomNum + '/book_room';
+            var data;
+
+            dialog = $( "#dialog-form" ).dialog({
+                height: 350,
+                width: 350,
+                modal: true,
+                buttons: {
+                    "Book Room": function () {
+                        data = {
+                            date: $("#date").val(),
+                            start_time: $("#start_time").val(),
+                            end_time: $("#end_time").val()
+                        };
+
+                        form = dialog.find( "form" ).on( "submit", function( event ) {
+                            event.preventDefault();
+                        });
+
+                        if (data.date == "" || data.start_time == "" || data.end_time == ""){
+                            var confirmed = confirm("All fields are required");
+
+                            if (!confirmed){
+                                dialog.dialog("close");
+                            } else {
+                                form[0].reset();
+                            }
+                        } else {
+                            $.ajax({
+                                url: url,
+                                type: "POST",
+                                dataType: "json",
+                                contentType: "application/json; charset=utf-8",
+                                data: JSON.stringify(data),
+                                success: function (res) {
+                                    confirm(res.message);
+                                    dialog.dialog("close");
+                                }
+                            });
+                        }
+                    },
+                    Cancel: function () {
+                        dialog.dialog("close");
+                    }
+                }
+            });
+
+            dialog.dialog( "open" );
+        });
+
+    });
+</script>

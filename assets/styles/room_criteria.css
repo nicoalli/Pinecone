@@ -1,0 +1,45 @@
+/*
+=========================
+Room Criteria Heading
+=========================
+*/
+#h2{
+    background: #506977;
+    border-bottom: solid 2em #F26C63;
+    height:3em;
+    line-height:2em;
+    font-size:18px;
+    font-weight:bold;
+    font-family:verdana;
+    display:block;
+    color:white;
+    display:block;
+    padding:10px;
+    border: 1px solid gray;
+    border-bottom:none;
+    margin-top:3em;
+}
+/*
+=========================
+Sub question
+=========================
+*/
+.sub {
+  position: relative;
+  margin-left: 15px;
+}
+/*
+=========================
+Submit button
+=========================
+*/
+#submit {
+   margin: auto;
+   display: block;
+   background-color:#506977;
+   color:white;
+}
+
+label {
+    display: block;
+}

@@ -1,0 +1,122 @@
+[
+        {
+                "building_name": "Sidney Smith Hall",
+                "latitude": 43.662586,
+                "longitude": -79.398730,
+                "address":
+                {
+                        "street": "100 St. George Street",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 3G3"
+                }
+        },
+        {
+                "building_name": "Bahen Center Information Tech",
+                "latitude": 43.659583,
+                "longitude": -79.397383,
+                "address":
+                {
+                        "street": "40 St. George Street",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 2E4"
+                }
+        },
+        {
+                "building_name": "University College",
+                "latitude": 43.663060,
+                "longitude": -79.396756,
+                "address":
+                {
+                        "street": "15 King's College Cir",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 3H7"
+                }
+        },
+        {
+                "building_name": "Sandford Fleming Building",
+                "latitude": 43.660175,
+                "longitude": -79.395146,
+                "address":
+                {
+                        "street": "10 King's College Road",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 3G4"
+                }
+        },
+        {
+                "building_name": "Lash Miller Chemical Labs",
+                "latitude": 43.661719,
+                "longitude": -79.398053,
+                "address":
+                {
+                        "street": "80 St. George Street",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 3H6"
+                }
+        },
+        {
+                "building_name": "Brennan Hall",
+                "latitude": 43.666356,
+                "longitude": -79.389808,
+                "address":
+                {
+                        "street": "81 St. Mary Street",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 1J4"
+                }
+        },
+        {
+                "building_name": "E.J. Pratt Library",
+                "latitude": 43.666341,
+                "longitude": -79.391350,
+                "address":
+                {
+                        "street": "71 Queens Park Crescent E",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 1K7"
+                }
+        },
+        {
+                "building_name": "J. M. Kelly Library",
+                "latitude": 43.664781,
+                "longitude": -79.389500,
+                "address":
+                {
+                        "street": "113 St. Joseph Street",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 1J4"
+                }
+        },
+        {
+                "building_name": "Gerstein Science Information Centre",
+                "latitude": 43.662156,
+                "longitude": -79.393729,
+                "address":
+                {
+                        "street": "9 King's College Cir",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M7A 1A5"
+                }
+        },
+        {
+                "building_name": "John P. Robarts Library Building",
+                "latitude": 43.664703,
+                "longitude": -79.399690,
+                "address":
+                {
+                        "street": "130 St. George Street",
+                        "city": "Toronto",
+                        "province": "ON",
+                        "postal_code": "M5S 1A5"
+                }
+        }
+]

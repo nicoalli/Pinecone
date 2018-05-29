@@ -1,0 +1,99 @@
+a {
+    color: #fff;
+}
+
+.link { color: #f26c63;}
+
+/*Box Container*/
+.content-box{
+    margin:3em;
+
+
+}
+.content-box .content {
+    overflow: scroll;
+    padding: 5px;
+    font-size: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid gray;
+    color: black;
+    height:25em;
+    margin-bottom:3em;
+    margin-left:3em;
+    margin-right:3em;
+
+}
+.content-box .title {
+    background: #506977;
+    height:20%;
+    line-height:2em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size:18px;
+    font-weight:bold;
+    display:block;
+    color:white;
+    padding:10px;
+    border-bottom:none;
+    margin-top:3em;
+    margin-left:2.5em;
+    margin-right:2.5em;
+    overflow:hidden;
+
+
+}
+
+input {
+    height: 1.5em;
+}
+
+/*Room Info*/
+.room{
+	list-style: none;
+}
+
+
+/*View Room Button*/
+.view-btn{
+	background-color:#506977;
+	color:white;
+    text-align:center;
+}
+
+ul.room{
+    border: solid 0.1em #F26C63;
+    margin:2em;
+    border-color:#F26C63;
+    overflow:hidden;
+    text-align:center;
+    padding:0.5em ;
+
+}
+
+
+
+
+
+@media screen and (min-width: 408px) {
+
+    input {
+        float: right;
+    }
+
+    ul.room {
+        text-align: left;
+    }
+
+    .select {
+        margin-bottom: 2em;
+        margin-right: 2em;
+        float: right;
+        display: inline;
+
+    }
+
+    .roomdistance {
+        display: inline;
+    }
+}

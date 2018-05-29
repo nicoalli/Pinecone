@@ -1,0 +1,28 @@
+[
+    
+
+    {
+        "room" : "SS1074",
+        "event_name" : "Representation learning for health with multi-modal clinical data",
+        "date" : "2017/03/15",
+        "time" : "4pm"
+
+    } , 
+     {
+        "room" : "SS1078",
+        "event_name" : "ChemE: The role of food science and engineering in food security",
+        "date" : "2017/03/20",
+        "time" : "4pm"
+
+    } ,
+     {
+        "room" : "BA2145",
+        "event_name" : "AI day",
+        "date" : "2017/03/29",
+        "time" : "4pm"
+
+    }
+
+
+    
+]

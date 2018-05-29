@@ -1,0 +1,133 @@
+/*
+ * contains CSS that is common to all pages
+ */
+
+/*
+  ===============================
+   fonts
+  ===============================
+ */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Muli:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+/*
+  ===============================
+   basic styling
+  ===============================
+ */
+
+/* resetting padding and margin for easier styling*/
+body * {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #F4F4F4;
+    font-family:  'Muli', sans-serif;
+}
+
+a{ color: #F26C63; }
+
+h1, h2 { font-family: 'Open Sans', sans-serif; }
+
+h5 { display: none; }
+/*
+  ===============================
+    header
+  ===============================
+ */
+
+header{
+    background: #506977;
+    border-bottom: solid 0.5em #F26C63;
+}
+
+.navbar{ margin: 0;}
+
+.navbar h1 {
+    padding: 0.3em;
+    color: #fff;
+    display: inline-block;
+}
+
+h1 > img { max-width: 1.5em; }
+
+#search-wrapper{ margin: 1em 0; }
+
+.form-input {
+    border-radius:0;
+    background-color: #f4f4f4;
+    box-shadow: none;
+    border: none;
+    border-right: 1px solid #f4f4f4;
+}
+
+.form-input:focus {
+    box-shadow: none;
+}
+
+.form-btn {
+    background-color: #f26c63;
+    color: #fff;
+    border-radius:0;
+    border-color: #f26c63;
+}
+
+.input-group{ margin: 0.3em; }
+
+/*
+  ===============================
+    side navigation
+  ===============================
+ */
+
+div#side_menu {
+    width: 30%;
+    padding: 0.5rem;
+    float: right;
+    background-color: #F26C63;
+    display:none;
+    position: relative;
+    color: white;
+    transition: 0.5s;
+    z-index: 1;
+}
+
+span#menu-btn {
+    color: #506977;
+    font-size: large;
+}
+
+a.menu_option {
+    font-size: large;
+    margin: 3%;
+    color:white;
+}
+
+#closebtn {
+    color: white;
+    text-align: right;
+    display: block;
+    transition: 0.3s;
+}
+
+#menu-btn {
+    margin-top: 1.8rem;
+    color: #f4f4f4;
+}
+
+@media screen and (min-width: 850px) {
+
+    div#side_menu {
+        height: 100vh;
+        position: fixed; /* Stay in place */
+        z-index: 1;
+        right: 0;
+    }
+}

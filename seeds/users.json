@@ -1,0 +1,37 @@
+[
+
+ {
+        "first_name" : "Nicole", 
+        "last_name" : "Alli", 
+        "email" : "nicole.alli@mail.utoronto.ca", 
+        "password" : "1234",
+        "admin" : false
+ } ,
+
+ {
+        "first_name" : "Nikita", 
+        "last_name" : "Dua", 
+        "email" : "nikita.dua@mail.utoronto.ca", 
+        "password" : "1342",
+        "admin" : false
+ },
+
+ {
+        "first_name" : "Nadine", 
+        "last_name" : "Chrisostomo", 
+        "email" : "nadine.c@mail.utoronto.ca", 
+        "password" : "4321",
+        "admin" : true
+ },
+
+ {
+        "first_name" : "Cindy", 
+        "last_name" : "Wiggins", 
+        "email" : "cindy.w@mail.utoronto.ca", 
+        "password" : "2134",
+        "admin" : true
+ }
+
+
+
+]

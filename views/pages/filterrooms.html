@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Map</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/styles/default.css">
+    <link rel="stylesheet" href="/assets/styles/list.css">
+</head>
+
+<body>
+
+<%- include('../partials/header') %>
+
+<!-- start of main content of page -->
+<main class="container-fluid" id="main">
+    <h5 id="is_admin"></h5>
+    <!-- filter sidebar -->
+    <section id="sidebar-list" class="col-xs-12 col-sm-6 col-md-4">
+        <div id="sidebar-wrapper">
+            <h2 id="title">Room Options</h2>
+            <span class="fa fa-caret-down fa-2x" aria-hidden="true" id="list-dropdown"></span>
+        </div>
+        <!-- list of options to filter the rooms -->
+        <div class="closed" id="slist">
+            <form>
+                <div class="input-group">
+                <div class="checkbox">
+                    <label><input type="checkbox" value="false" name="wifi">Wifi</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="" name="computer">Computers</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="true" name="desks_chairs">Desks and Chairs</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="true" name="whiteboard_blackboard">Whiteboard/Blackboard</label>
+                </div>
+                <div class="checkbox">
+                    <label><input type="checkbox" value="true" name="projector">Projector</label>
+                </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon2">
+                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                    </span>
+                    <input class="form-control" type="date" name="date">
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <label>Start Time</label><br>
+                        <input class="form-control" type="text" name="start_time" placeholder="hh:mm">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <label>End Time</label><br>
+                        <input class="form-control" type="text" name="end_time" placeholder="hh:mm">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon" id="basic-addon1">
+                        <i class="fa fa-building" aria-hidden="true"></i>
+                    </span>
+                    <select class="form-control" id="building" name="building">
+                        <option>Sidney Smith Hall</option>
+                        <option>Bahen Center Information Tech</option>
+                        <option> University College</option>
+                        <option> Sandford Fleming Building </option>
+                        <option> Lash Miller Chemical Labs </option>
+                    </select>
+                </div>
+            </form>
+            <button class="filter" id="filter-btn"> Filter </button>
+        </div>
+    </section>
+
+    <!-- the container for the rooms that will be loaded from db -->
+    <section id="map" class="col-xs-12 col-sm-6 col-md-8">
+        <h5>Rooms</h5>
+        <ul class="list-unstyled" id="room-list"></ul>
+    </section>
+    <h5 visibilty="hidden" id="filteroom"></h5>
+</main>
+
+<!-- scripts -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+<script src="/assets/scripts/main.js"></script>
+<script src="/assets/scripts/filterrooms.js"></script>
+</body>
+</html>

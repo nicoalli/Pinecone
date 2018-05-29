@@ -1,0 +1,33 @@
+{
+  "name": "team36-pinecone",
+  "version": "1.0.0",
+  "description": "room booking application",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-validator":"" ,
+    "express-session": "^1.15.1",
+    "mongoose": "^4.8.6",
+    "nodemon": "^1.11.0",
+    "node-mongo-seeds": "",
+    "ejs": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "engines": {
+     "node": "4.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CSC309-spring2017/Team36-Pinecone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CSC309-spring2017/Team36-Pinecone/issues"
+  },
+  "homepage": "https://github.com/CSC309-spring2017/Team36-Pinecone#readme"
+}

@@ -1,0 +1,156 @@
+
+
+h2 {
+	padding: 1.5em;
+    color: #506977;
+    text-align: center;
+}
+
+
+
+.title {
+  background: #506977;
+  font-size: 1em;
+  font-weight:bold;
+  color:white;
+  padding:10px;
+}
+
+a.viewroom {
+
+	float:left;
+	margin-bottom: 2%
+
+}
+
+a.viewuser {
+
+	float:right;
+	margin:none;
+}
+
+
+ ul#ulist {
+  text-align: left;
+ }
+
+ ul#rlist {
+  text-align: left;
+ }
+
+/*
+===============================
+    Sections
+===============================
+ */
+
+section#rooms {
+    margin-top: 5%;
+    width: 60%;
+    max-height: 30rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 8%;
+}
+
+
+section#users {
+    margin-top: 5%;
+    width: 60%;
+    max-height: 30rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+section#bookings {
+    margin-top: 5%;
+    width: 70%;
+    max-height: 21rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#roomstest {
+	 width: 50%;
+	 height: 40%;
+	 float:left;
+}
+
+div#usersbox {
+	 width: 50%;
+	 height: 40%;
+	 float:right;
+}
+
+div#bookingsbox {
+	margin-top: 5%;
+	 width: 100%;
+	 height: 30%;
+	 float:none;
+}
+
+/*
+==========================
+Room, user and booking boxes
+==========================
+*/
+
+.room {
+  border: 1px solid #F26C63;
+  padding:1em;
+  margin:1.5em 0;
+}
+
+.room > p{
+    text-align: left;
+}
+
+
+
+#rooms {
+  margin-top:3em;
+  overflow:scroll;
+  max-height:21rem;
+}
+
+.user {
+  border: 1px solid #F26C63;
+  padding:1em;
+  margin:1.5em 0;
+}
+
+.user > p{
+    text-align: left;
+}
+
+#users {
+  margin-top:3em;
+  overflow:scroll;
+  max-height:21rem;
+}
+
+#bookings {
+  margin-top:3em;
+  overflow:scroll;
+  max-height:21rem;
+}
+
+/*Individual Even box*/
+button.edit {
+    float: right;
+
+}
+
+button.roomdelete {
+    float: right;
+
+}
+
+
+button.userdelete{
+    float: right;
+}

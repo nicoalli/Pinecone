@@ -1,0 +1,68 @@
+#login-signup{
+    width: 80%;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.login-wrapper{
+    background: #506977;
+    margin-top: 5rem;
+    padding: 1.5rem;
+}
+
+/*
+  ===============================
+   login or sign up tabs
+  ===============================
+ */
+
+ul.tab-options{
+    list-style: none;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+li.tab{
+    color: #f4f4f4;
+    text-align: center;
+    padding: 0.6rem 4rem;
+    font-size: 1.5rem;
+    font-variant: small-caps;
+    display: inline;
+    background: #e2a7a3;
+}
+
+.login-wrapper > article:last-child {
+    display:none;
+}
+
+li.active{
+    background: #F26C63;
+}
+
+/*
+  ===============================
+   forms
+  ===============================
+ */
+
+div h3{
+    text-align: center;
+    color: #f4f4f4;
+    margin: 1rem 0;
+}
+
+form > div {  padding: 0.5rem; }
+
+.btn-wrapper { padding: 1rem; }
+
+.fa-unlock-alt,
+.fa-user { width: 14px; }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    #login-singup { width: 50%; }
+
+    li.tab{ padding: 0.6rem 6rem; }
+}

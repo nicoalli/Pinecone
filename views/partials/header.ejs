@@ -1,0 +1,36 @@
+<!-- header -->
+<header>
+    <div class="navbar">
+        <!-- website name and logo -->
+        <a href="/api/home">
+            <h1 class="col-xs-12 col-sm-6 col-lg-5"><img src="/assets/images/logo1.png">Pinecone</h1>
+        </a>
+
+        <!-- search bar -->
+        <div class="col-xs-11 col-sm-5 col-lg-6 navbar-left" id="search-wrapper">
+            <div class="input-group">
+                <input name="search_query" type="text" class="form-control form-input"
+                       placeholder="search by room name or building code">
+                <span class="input-group-btn">
+                    <button id="search-btn" class="btn form-btn" type="button">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+
+        <!-- menu button -->
+        <div class="col-lg btn form-btn navbar-inline" id="menu-btn">
+            <span class="fa fa-bars" aria-hidden="true"></span>
+        </div>
+    </div>
+</header>
+
+<!-- side menu, this appears only onclick of the menu button -->
+<div id="side_menu">
+    <i class="fa fa-times fa-lg" aria-hidden="true" id="closebtn"></i>
+    <a class="menu_option" href="/api/home">Home</a><br><br>
+    <a class="menu_option" href="/api/home/profile">Profile</a><br><br>
+    <a class="menu_option" href="/logout">Logout</a><br><br>
+    <a class="menu_option" id="admin"  style="visibility :hidden;" href="/api/admin">Administration</a>
+</div>

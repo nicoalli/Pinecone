@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adminstration</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/styles/default.css">
+    <link rel="stylesheet" href="../../assets/styles/admin.css">
+</head>
+
+<body>
+    <section id="front_page">
+    <%- include('../partials/header') %>
+
+    <main class="container-fluid" id="main">
+    <div id="roomstest">
+   <section id="rooms">
+              <h5 id="is_admin"></h5>
+              <h5> events </h5>
+                <h2 class="title">Rooms</h2>
+
+                 <ul class="list-unstyled closed" id="rlist"></ul>
+
+            </section>
+            </div>
+
+
+
+      <div id="usersbox">      
+      <section id="users">
+              <h5> events </h5>
+                <h2 class="title">Users</h2>
+
+            <ul class="list-unstyled closed" id="ulist"></ul>
+
+               
+            </section>
+            </div>
+
+            <div id="bookings box">
+            <section id="bookings">
+               
+                <h2 class="title">Bookings</h2>
+                  <ul class="list-unstyled closed" id="blist"></ul>
+
+                  
+            </section>
+            </div>
+
+
+    </main>
+    </section>
+     <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="../../assets/scripts/main.js"></script>
+     <script src="../../assets/scripts/admin_user.js"></script>
+      <script src="../../assets/scripts/admin_rooms.js"></script>
+       <script src="../../assets/scripts/admin_buttons.js"></script>
+        <script src="../../assets/scripts/admin_schedule.js"></script>
+
+</body>
+</html>

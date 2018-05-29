@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinecone</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../../assets/styles/default.css">
+    <link rel="stylesheet" href="../../assets/styles/editroom.css"> 
+    
+
+
+
+</head>
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main id="main">
+    <section id="profilepage">
+    <h5> Room</h5>
+    
+    <h2> <%- room_name %></h2>
+    <h5 id="is_admin"></h5>
+    <div class="content-box">
+        <div class="title">Edit Room Details</div>
+        <div class="content">
+            <ul class="room">
+
+                <!--Hardcoded for visual purpose -->
+                <br>
+                <li id="capacity"> Capacity: <span id=capacityval><%- capacity %> </span> <button onclick="updateCapacity()" class="edit"> Edit</button> </li> <br>
+                
+                <li id="wifi"> Wifi: <span id=wifival><%- wifi %> </span><button onclick="updateWifi()" class="edit"> Edit</button> </li><br>
+                
+                <li id="computer">Computer: <span id=computerval><%- computer %> </span><button onclick="updateComputer()" class="edit"> Edit</button> </li><br>
+
+                <li id="num_computers">Number of Computers: <span id=numcomputerval><%- num_computer %> </span> <button onclick="updateNumComputer()" class="edit"> Edit</button> </li><br>
+
+                <li id="desk_chairs">Desks and Chairs: <span id=deskchairval><%- desk_chair %> </span> <button onclick="updateDeskChair()" class="edit"> Edit</button> </li><br>
+
+                <li id="num_desks">Number of Desks:  <span id=numdeskval><%- num_desks %> </span> <button onclick="updateNumDesk()" class="edit"> Edit</button> </li><br>
+                
+                <li id="num_chairs">Number of Chairs: <span id=numchairval><%- num_chairs %> </span> <button onclick="updateNumChair()" class="edit"> Edit</button> </li><br>
+
+                <li id="boards">Whiteboard/Blackboard: <span id=boardval><%- board %> </span> <button onclick="updateBoard()" class="edit"> Edit</button> </li><br>
+
+                <li id="projector">Projector: <span id=projectorval><%- projector %> </span> <button onclick="updateProjector()" class="edit"> Edit</button> </li><br>
+
+            </ul>
+            <div id="buttons">
+               <%- savebutton %>
+                <button onclick="cancelButton()" class="cancel"> Cancel</button> 
+            </div>
+            <br>
+
+        
+        </div>
+    </div>
+
+    </section>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="../assets/scripts/main.js"></script>
+    <script src="../assets/scripts/editroom.js"></script>
+
+
+    
+
+</body>
+</html>

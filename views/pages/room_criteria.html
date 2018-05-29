@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Room Criteria</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/styles/default.css">
+    <link rel="stylesheet" href="../../assets/styles/room_criteria.css">
+
+</head>
+<body>
+
+  <%- include('../partials/header') %>
+
+  <!-- side menu, this appears only onclick of the menu button -->
+  <div id="side_menu">
+    <i class="fa fa-times fa-lg" aria-hidden="true" id="closebtn"></i>
+    <a class="menu_option" href="views/pages/main.html">Home</a><br><br>
+    <a class="menu_option" href="views/pages/user_profile.html">Profile</a><br><br>
+    <a class="menu_option" href="#">Logout</a>
+  </div>
+
+  <main id="main">
+    <div class="container">
+    <h2 id="h2">ROOM CRITERIA</h2>
+    <h5 id="is_admin"></h5>
+    <form  id="form" class="form--vertical" action="" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+        <label> 1) When do you need the room?</label>
+        <!-- pattern="(\d{4})-(\d{2})-(\d{2})" !-->
+        <input type="date" name="date" required="">
+      </div>
+      <div class="form-group">
+        <label> 2) What is the approximate time range you prefer?</label>
+        <label class="text-inline"> Start Time <input name="start_time" type="text" list="start_times" required> </label>
+        <datalist id="start_times">
+          <option> 9 AM </option>
+          <option> 10 AM </option>
+          <option>11 AM </option>
+          <option> 12 PM </option>
+          <option> 1 PM </option>
+          <option> 2 PM </option>
+          <option> 3 PM </option>
+          <option> 4 PM </option>
+          <option> 5 PM </option>
+          <option> 6 PM </option>
+          <option> 7 PM </option>
+          <option>  8 PM</option>
+          <option>  9 PM </option>
+        </datalist>
+        <label class="text-inline">End Time <input name="end_time" type="text" list="end_times" required></label>
+        <datalist id="end_times">
+          <option> 9 AM </option>
+          <option> 10 AM </option>
+          <option> 11 AM </option>
+          <option> 12 PM </option>
+          <option> 1 PM </option>
+          <option> 2 PM </option>
+          <option> 3 PM </option>
+          <option> 4 PM </option>
+          <option> 5 PM </option>
+          <option> 6 PM </option>
+          <option> 7 PM </option>
+          <option> 8 PM</option>
+          <option> 9 PM </option>
+        </datalist>
+      </div>
+      <div class="form-group">
+        <label> 3) How many people do you need the room for? </label>
+        <input name="capacity" type="number" min="0" default="0" required>
+      </div>
+      <div class="form-group">
+        <label> 4) Do you need wifi access? </label>
+        <label class="checkbox-inline"> <input name="wifi" type="checkbox" value="true"> Yes </label>
+        <label class="checkbox-inline"> <input name="wifi" type="checkbox" value="false"> No </label>
+      </div>
+
+      <div class="form-group">
+      <label> 5) Do you need computers? </label>
+      <label class="checkbox-inline"> <input name="computer" type="checkbox" value="true"> Yes </label>
+      <label class="checkbox-inline"> <input name="computer" type="checkbox" value="false"> No </label>
+      </div>
+      <div class="form-group sub">
+      <label> 5a) If yes how many computers do you need? </label>
+      <input name="number_computers" type="number" min="0" default="0">
+      </div>
+      <div class="form-group">
+      <label> 6) Do you need desks and chairs? </label>
+      <label class="checkbox-inline"> <input name="desks_chairs" type="checkbox" value="true"> Yes </label>
+      <label class="checkbox-inline"> <input name="desk_chairs" type="checkbox" value="false"> No </label>
+      </div>
+      <div class="form-group sub">
+      <label> 6a) If yes,how many chairs do you need? </label>
+      <input name="number_chairs" type="number" min="0" default="0">
+      </div>
+      <div class="form-grou sub">
+      <label> 6b) If yes, how many desks do you need? </label>
+      <input name="number_desks" type ="number" min="0" default="0">
+      </div>
+      <div class="form-group">
+      <label> 7) Do you need whiteboards or blackboards? </label>
+      <label class="checkbox-inline"> <input name="whiteboard_blackboard" type="checkbox" value="true"> Yes </label>
+      <label class="checkbox-inline"> <input name="whiteboard_blackboard" type="checkbox" value="false"> No </label>
+      </div>
+
+      <div class="form-group">
+      <label> 8) Do you need a projector? </label>
+      <label class="checkbox-inline"> <input name="projector" type="checkbox" value="true"> Yes </label>
+      <label class="checkbox-inline"> <input name="projector" type="checkbox" value="false"> No </label>
+      </div>
+
+      <div class="form-group">
+      <label for="buildings_list"> 8) Is there any building you prefer? </label>
+      <input name="building" type="text" id="buildings_list" list="buildings"/>
+      <datalist id="buildings">
+      <option>Sidney Smith Hall</option>
+      <option>Bahen Center Information Tech</option>
+      <option> University College</option>
+      <option> Sandford Fleming Building </option>
+      <option> Lash Miller Chemical Labs </option>
+    </datalist>
+      </div>
+
+      <input type="submit" id="submit-btn" value="Submit">
+    </form>
+    </div>
+  </main>
+
+  <!-- scripts -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+          integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+          crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+          integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+          crossorigin="anonymous"></script>
+  <script src="/assets/scripts/main.js"></script>
+  <script src="/assets/scripts/room.js"></script>
+</body>
+</html>

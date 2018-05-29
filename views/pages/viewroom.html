@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinecone</title>
+
+        <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/assets/styles/default.css">
+    <link rel="stylesheet" href="/assets/styles/viewroom.css">
+
+    <script>
+        $(document).ready(function (){
+            $( "#dialog-form" ).dialog({
+                autoOpen: false
+            });
+
+            $('body').on('click', '.book', function () {
+                var roomNum = $(this).val();
+                var url = '/api/room/' + roomNum + '/book_room';
+                var data;
+
+                dialog = $( "#dialog-form" ).dialog({
+                    height: 350,
+                    width: 350,
+                    modal: true,
+                    buttons: {
+                        "Book Room": function () {
+                            data = {
+                                date: $("#date").val(),
+                                start_time: $("#start_time").val(),
+                                end_time: $("#end_time").val()
+                            };
+
+                            form = dialog.find( "form" ).on( "submit", function( event ) {
+                                event.preventDefault();
+                            });
+
+                            if (data.date == "" || data.start_time == "" || data.end_time == ""){
+                                var confirmed = confirm("All fields are required");
+
+                                if (!confirmed){
+                                    dialog.dialog("close");
+                                } else {
+                                    form[0].reset();
+                                }
+                            } else {
+                                $.ajax({
+                                    url: url,
+                                    type: "POST",
+                                    dataType: "json",
+                                    contentType: "application/json; charset=utf-8",
+                                    data: JSON.stringify(data),
+                                    success: function (res) {
+                                        confirm(res.message);
+                                        dialog.dialog("close");
+                                    }
+                                });
+                            }
+                        },
+                        Cancel: function () {
+                            dialog.dialog("close");
+                        }
+                    }
+                });
+
+                dialog.dialog( "open" );
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+
+    <%- include('../partials/header') %>
+
+    <main id="main">
+    <section id="profilepage">
+        <h5> View Room</h5>
+        <h5 id="is_admin"></h5>
+
+    <div class="content-box">
+        <div class="title">View Room Details</div>
+        <div class="content">
+            <ul class="room">
+                <!--Hardcoded for visual purpose -->
+                <li class="roomname"><%- room_info.room_number %></li>
+                <li class="building"><%- room_info.building %></li>
+                <li class="room distance">0.5km</li>
+                <br>
+                <li class="criteria">Contains:
+                    <%- room_info.has_wifi %>
+                     <%- room_info.projector %>
+                     <%- room_info.boards %>
+                    <%- room_info.number_computers %>
+                    <%- room_info.number_desks %>
+                    <%- room_info.number_chairs %>
+
+                </li>
+                <li class="capacity">Capacity: <%- room_info.capacity %></li>
+                <br>
+                <% if (booking_info.length > 0) { %>
+                    <% var booking_i = JSON.stringify(booking_info) %>
+                    <button class="book" id="book-btn" value="<%= booking_i %>">Book</button>
+                    <input type="hidden" name="room_number" value=<%- room_info.room_number %>>
+                <% } else { %>
+                    <button class="book" id="book" value=<%- room_info.room_number %>>Book</button>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+
+    </section>
+
+        <!-- modal form -->
+        <div id="dialog-form" title="Book This Room">
+            <p>Choose a date and time to book the room</p>
+            <form>
+                <div class="input-group">
+                    <label>Date</label>
+                    <input class="form-control" type="date" name="date" id="date" required>
+                </div>
+                <div class="input-group">
+                    <label>Start Time</label><br>
+                    <input class="form-control" type="text" name="start_time" placeholder="hh:mm" id="start_time" required>
+                </div>
+                <div class="input-group">
+                    <label>End Time</label><br>
+                    <input class="form-control" type="text" name="end_time" placeholder="hh:mm" id="end_time" required>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="/assets/scripts/main.js"></script>
+    <script src="/assets/scripts/room.js"></script>
+
+</body>
+</html>

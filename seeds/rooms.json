@@ -1,0 +1,174 @@
+[
+    
+
+    {
+        "room_number" : "SS1074",
+        "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM","user":"nikita.dua@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM", "user":"nikita.dua@mail.utoronto.ca","booked": true},
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM", "user": "cindy.w@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM", "user": "cindy.w@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : false,
+        "number_computers" :0,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Sidney Smith Hall"
+    } ,  
+
+
+    {
+        "room_number" : "SS1078",
+        "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM", "user" : "nicole.alli@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM", "user" : "nicole.alli@mail.utoronto.ca", "booked": true}
+
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : false,
+        "number_computers" :0,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Sidney Smith Hall"
+    }, 
+    { 
+        "room_number" : "BA2145",
+         "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM", "user" : "nikita.dua@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM",  "user" : "nikita.dua@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : true,
+        "number_computers" :30,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Bahen Center Information Tech"
+       
+    },
+    
+
+
+    { 
+        "room_number" : "BA2145",
+         "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM",  "user" : "nikita.dua@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM",  "user" : "nikita.dua@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : true,
+        "number_computers" :30,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Bahen Center Information Tech"
+       
+    }, 
+
+     {
+        "room_number" : "UC140",
+         "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM", "user": "nadine.c@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM", "user": "nadine.c@mail.utoronto.ca",  "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : false,
+        "number_computers" :0,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "University College"
+    }, 
+
+    {  
+        "room_number" : "SF1105",
+          "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM", "user": "cindy.w@mail.utoronto.ca" , "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM", "user": "cindy.w@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : false,
+        "number_computers" :0,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Sandford Fleming Building"
+    }, 
+
+     {  
+        "room_number" : "LM158",
+          "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM", "user":"nikita.dua@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM","user": "nicole.alli@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : false,
+        "number_computers" :0,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+         "building": "Lash Miller Chemical Labs"
+    }, 
+
+     { 
+        "room_number" : "BA2270",
+          "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM","user": "nicole.alli@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM","user": "nicole.alli@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : true,
+        "computer" : false,
+        "number_computers" :0,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Bahen Center Information Tech" 
+    }, 
+
+    {  
+        "room_number" : "BA3175",
+          "room_schedules" : [
+            {"date" : "2017/03/15", "start_time": "10 AM" ,"end_time": "12 PM","user": "nicole.alli@mail.utoronto.ca", "booked": true},
+            {"date" : "2017/03/15", "start_time": "2 PM" ,"end_time": "3 PM","user": "nicole.alli@mail.utoronto.ca", "booked": true}
+        ],
+        "capacity" : 71,
+        "wifi" : false,
+        "computer" : true,
+        "number_computers" :50,
+        "desks_chairs" : true,
+        "number_desks" : 50,
+        "number_chairs" : 50,
+        "whiteboard_blackboard" : true,
+        "projector" : true,
+        "building": "Bahen Center Information Tech"
+    } 
+
+    
+]

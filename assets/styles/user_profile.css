@@ -1,0 +1,98 @@
+/*
+==========================
+User Profile Section
+==========================
+*/
+h5 {
+  visibility: hidden
+}
+#profile {
+   background-color: #F4F4F4;
+   border: solid 0.3em #F26C63;
+   padding: 25px;
+   margin-top: 5rem;
+   text-align: center;
+   float:left;
+}
+
+.title {
+  background: #506977;
+  font-size: 1em;
+  font-weight:bold;
+  color:white;
+  padding:10px;
+}
+
+#photo {
+  margin-top:2em;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+p.room_name {
+  font-size: larger;
+}
+/*
+==========================
+Upcoming Events Section
+==========================
+*/
+
+.event {
+  border: 0.25em solid #F26C63;
+  padding:1em;
+  margin:1.5em 0;
+  text-align: center;
+
+}
+
+.event > p{
+    text-align: center;
+}
+
+#events {
+  margin-top:3em;
+  overflow:scroll;
+  max-height:90%;
+  float:right;
+  max-width:100%;
+}
+
+section#events{
+  width:100%;
+}
+
+/*Individual Even box*/
+
+#cancel {
+    float: right;
+}
+
+/*
+==========================
+Calendar
+==========================
+*/
+
+
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  section#events{
+    float:right;
+    width:55%;
+    margin-right:4em;
+    display:inline;
+    margin-top:5rem;
+    height:70%;
+  }
+
+  #profile{
+    height: 25em
+  }
+
+  #main{
+    height:80%;
+  }
+}

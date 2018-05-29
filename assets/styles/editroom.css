@@ -1,0 +1,105 @@
+/*Box Container*/
+.content-box{
+    margin:3em;
+
+}
+.content-box .content {
+    overflow: scroll;
+    padding: 5px;
+    font-size: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: 1px solid gray;
+    color: black;
+    height:20em;
+    margin-bottom:3em;
+    margin-left:3em;
+    margin-right:3em;
+
+}
+.content-box .title {
+    background: #506977;
+    height:2em;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    font-size:18px;
+    color:white;
+    padding:10px;
+    border-bottom:none;
+    margin-top:3em;
+    margin-left:2.5em;
+    margin-right:2.5em;
+}
+
+/*Room Info*/
+.room{
+    list-style: none;
+}
+
+/*Edit Button*/
+.edit{
+    background-color:#506977;
+    color:white;
+    font-size: 1em;
+    margin-bottom:2em;
+    height:1.5em;
+    width:3.5em;
+    text-align:center;
+    margin-left: 0;
+}
+
+ul.room{
+    border: solid 0.1em #F26C63;
+    margin:2em;
+    border-color:#F26C63;
+    text-align:left;
+    padding:1em;
+    font-size:1em;
+
+}
+
+li{
+    text-align:center;
+}
+
+h2{
+    text-align:center;
+    color: #F26C63;
+    font-weight: bold;
+    margin-top:2em;
+
+}
+
+#buttons{
+    text-align: center;
+}
+.cancel{
+    margin:1em;
+    background-color:#506977;
+    color:white;
+    font-size: 1em;
+    height:1.8em;
+    width:4.2em;
+    display:inline;
+}
+
+.save{
+    margin:1em;
+    background-color:#506977;
+    color:white;
+    font-size: 1em;
+    height:1.8em;
+    width:4.2em;
+    display:inline;
+}
+
+
+
+@media screen and (min-width: 587px) {
+
+.edit{
+    margin-left:4em;
+    display:inline;
+}
+
+}

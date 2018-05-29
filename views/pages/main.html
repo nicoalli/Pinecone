@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pinecone</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/styles/default.css">
+    <link rel="stylesheet" href="../../assets/styles/main.css">
+</head>
+
+<body>
+    <section id="front_page">
+
+        <%- include('../partials/header') %>
+        <h5 id="is_admin"><%- admin %></h5>
+        <div id="main">
+        <section id="search">
+        <div id="greeting"><h2> Hello <%- name %><br>Find and Book a Room for You and Your Team! <br> Find Room By: </h2></div>
+        <div id='nav_buttons'>
+            <div id="location">
+                <div class="image" id="location_image"><img src='../../assets/images/UofTMap1.png' alt="UofTMap1.png" class="search_image"></div>
+                <div class="search_buttons" id="location-button"><button id="location-btn" onclick="location.href='/api/map'" type="button" class="input_button">Location</button></div>
+            </div>
+            <div id="criteria">
+                <div class="image" id="criteria_image"><img src='../../assets/images/lecture_hall.JPG' alt="lecture_hall.JPG" class="search_image"></div>
+                <div class="search_buttons" id="criteria-button"><button id="criteria-btn"onclick="location.href='/api/room'" type="button"  class="input_button">Filter Criteria</button></div>
+            </div>
+            <div id="advanced">
+                <button id="advanced-btn" onclick="location.href='/api/roomcriteria'" type="button" class="input_button">Advanced Search</button>
+            </div>
+
+            </div>
+
+        </section>
+          <section id="events">
+            <div id="events-box">
+                <h3>Upcoming Events</h3>
+                <ul class="list-group">
+                    <% for(var i=0; i < events.length; i++) { %>
+                    <li class="list-group-item">
+                        <strong><span class="highlight"><%- events[i].event_name %></span></strong>
+                        <br><span class="highlight">When:</span> <%- events[i].date %> @ <%- events[i].time %>
+                        <br><span class="highlight">Where:</span> <%- events[i].room %>
+                    </li>
+                    <% } %>
+                </ul>
+          </section>
+        </div>
+    </section>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+            integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+            crossorigin="anonymous"></script>
+    <script src="../../assets/scripts/main.js"></script>
+
+</body>
+</html>
